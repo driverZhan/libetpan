@@ -476,6 +476,7 @@ int mailimap_select_condstore_optional(mailimap * session, const char * mb,
     return MAILIMAP_ERROR_BAD_STATE;
 
   r = mailimap_send_current_tag(session);
+  r = MAILIMAP_NO_ERROR;
   printf("mailimap_send_current_tag-->"+r);
   if (r != MAILIMAP_NO_ERROR)
     return r;
