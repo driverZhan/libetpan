@@ -2552,10 +2552,10 @@ int mailimap_parse_response(mailimap * session,
   else
     snprintf(tag_str, 15, "%i", session->imap_tag);
     
-  if (strcmp(response->rsp_resp_done->rsp_data.rsp_tagged->rsp_tag, tag_str) != 0) {
-    mailimap_response_free(response);
-    return MAILIMAP_ERROR_PROTOCOL;
-  }
+//  if (strcmp(response->rsp_resp_done->rsp_data.rsp_tagged->rsp_tag, tag_str) != 0) {
+//    mailimap_response_free(response);
+//    return MAILIMAP_ERROR_PROTOCOL;
+//  }
   
   if (response->rsp_resp_done->rsp_data.rsp_tagged->rsp_cond_state->rsp_type ==
       MAILIMAP_RESP_COND_STATE_BAD) {
