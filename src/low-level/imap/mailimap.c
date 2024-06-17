@@ -2552,6 +2552,7 @@ int mailimap_parse_response(mailimap * session,
   else
     snprintf(tag_str, 15, "%i", session->imap_tag);
     
+  //remove tags verification
 //  if (strcmp(response->rsp_resp_done->rsp_data.rsp_tagged->rsp_tag, tag_str) != 0) {
 //    mailimap_response_free(response);
 //    return MAILIMAP_ERROR_PROTOCOL;
