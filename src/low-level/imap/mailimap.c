@@ -2557,13 +2557,12 @@ int mailimap_parse_response(mailimap * session,
 //    mailimap_response_free(response);
 //    return MAILIMAP_ERROR_PROTOCOL;
 //  }
-  printf(tag_str);
-  printf(response->rsp_resp_done->rsp_data.rsp_tagged->rsp_tag);
-  if (response->rsp_resp_done->rsp_data.rsp_tagged->rsp_cond_state->rsp_type ==
-      MAILIMAP_RESP_COND_STATE_BAD) {
-    mailimap_response_free(response);
-    return MAILIMAP_ERROR_PROTOCOL;
-  }
+  
+  //if (response->rsp_resp_done->rsp_data.rsp_tagged->rsp_cond_state->rsp_type ==
+   //   MAILIMAP_RESP_COND_STATE_BAD) {
+   // mailimap_response_free(response);
+  //  return MAILIMAP_ERROR_PROTOCOL;
+  //}
 
   * result = response;
 
